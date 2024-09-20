@@ -81,7 +81,7 @@ namespace WebApiMedicalControl.Controllers
             _context.Pacientes.Add(paciente);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPaciente", new { id = paciente.Id_Paciente}, paciente);
+            return CreatedAtAction(nameof(GetPaciente), new { id = paciente.Id_Paciente}, paciente);
         }
 
         // DELETE: api/Pacientes/5
